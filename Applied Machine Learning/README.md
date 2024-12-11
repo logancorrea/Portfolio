@@ -3,11 +3,12 @@
 ### Author: Logan Correa
 
 ## Abstract
-Depression is a complex mental health condition influenced by a variety of demographic, psychological, and biological factors. This study investigates the potential of machine learning techniques to predict depression using demographic data from the 2022 Mental Health Client-Level Data (MH-CLD) provided by SAMHSA. The dataset included 228,891 entries and ten key variables, such as age, gender, education, and employment status.
+Depression is a complex mental health condition influenced by a variety of demographic, psychological, and biological factors. This study investigates the potential of machine learning techniques to predict depression using demographic data from the 2022 Mental Health Client-Level Data (MH-CLD) provided by SAMHSA. The dataset included 228,891 entries and ten key variables, such as age, gender, education, and employment status. Supervised machine learning models—Logistic Regression, Random Forest, and Gradient Boosting—were trained and evaluated for their predictive capabilities. SHAP analysis highlighted employment status and substance use as the most influential predictors, while variables such as race and ethnicity showed minimal impact.
 
-Supervised machine learning models—Logistic Regression, Random Forest, and Gradient Boosting—were trained and evaluated for their predictive capabilities. SHAP analysis highlighted employment status and substance use as the most influential predictors, while variables such as race and ethnicity showed minimal impact. Despite addressing class imbalance using SMOTE and optimizing model hyperparameters via Optuna, all supervised models exhibited relatively low predictive performance, with Logistic Regression achieving the highest AUC of 0.55. Unsupervised models, including Hierarchical Clustering and K-Modes Clustering, also performed poorly in identifying meaningful patterns, with silhouette scores of 0.50 and 0.067, respectively.
+Despite addressing class imbalance using SMOTE and optimizing model hyperparameters via Optuna, all supervised models exhibited relatively low predictive performance, with Logistic Regression achieving the highest AUC of 0.55. Unsupervised models, including Hierarchical Clustering and K-Modes Clustering, also performed poorly in identifying meaningful patterns, with silhouette scores of 0.50 and 0.067, respectively. While Multiple Correspondence Analysis (MCA) provided dimensionality reduction, it did not significantly enhance model performance. 
 
-While Multiple Correspondence Analysis (MCA) provided dimensionality reduction, it did not significantly enhance model performance. These findings underscore the limitations of demographic data alone in capturing the multifactorial nature of depression. Future research should focus on integrating additional data modalities, such as clinical or neuroimaging data, and exploring advanced machine learning techniques to improve predictive accuracy and uncover deeper insights into depression’s underlying factors.
+These findings underscore the limitations of demographic data alone in capturing the multifactorial nature of depression. Future research should focus on integrating additional data modalities, such as clinical or neuroimaging data, and exploring advanced machine learning techniques to improve predictive accuracy and uncover deeper insights into depression’s underlying factors.
+
 
 ---
 
@@ -33,22 +34,38 @@ Building on these findings, this study applies both supervised and unsupervised 
 ## Methodology and Results
 
 ### Dataset Preprocessing
-- **Dataset:** 2022 Mental Health Client-Level Data (MH-CLD) from SAMHSA.
-- **Selected Variables:** Age, education, ethnicity, race, gender, substance use flag, depression diagnosis flag (DEPRESSFLG), employment status, veteran status, and living arrangement.
-- **Preprocessing:** 
-  - Removed rows with missing/invalid data.
-  - Balanced classes using SMOTE.
-  - Cleaned dataset: 228,891 entries.
+The dataset used in this study was the 2022 Mental Health Client-Level Data (MH-CLD) provided by SAMHSA, containing demographic and mental health-related variables collected from treatment facility clients across the United States. Ten variables were selected for analysis, including age, education, ethnicity, race, gender, substance use flag, depression diagnosis flag (DEPRESSFLG), employment status, veteran status, and living arrangement. Preprocessing involved removing rows with missing or invalid data, resulting in a cleaned dataset of 228,891 entries. The target variable, DEPRESSFLG, showed a class imbalance, with 38% flagged as depressed and 62% not depressed, which was addressed using Synthetic Minority Oversampling Technique (SMOTE) to create a balanced dataset. Descriptive statistics indicated moderate variability in most features, while some variables, like ethnicity and race, displayed heavily skewed distributions.
+
+Exploratory data analysis revealed generally weak correlations between features, with most coefficients near zero. However, age and employment status exhibited a mild positive correlation (0.23). Individual variable distributions showed patterns such as an approximately normal distribution for age, whereas ethnicity and race were imbalanced and highly skewed. Advanced statistical analyses of skewness and kurtosis confirmed these imbalances, particularly for ETHNIC and VETERAN, which deviated significantly from normality. These findings provided a comprehensive understanding of the dataset’s structure, which informed the application of machine learning models in subsequent analysis.
+
 
 ### Model Training and Evaluation
-- **Supervised Models:** Logistic Regression, Random Forest, and Gradient Boosting.
-- **Unsupervised Models:** Hierarchical Clustering, K-Modes Clustering, and MCA for dimensionality reduction.
-- **Performance:**
-  - Logistic Regression achieved the highest AUC (0.55).
+Three supervised machine learning models were implemented to predict depression status: Logistic Regression, Random Forest, and Gradient Boosting. Logistic Regression was determined to be the most suitable model due to its computational efficiency and comparable performance to the other models. Hyperparameter optimization was conducted using Optuna, and class imbalance in the target variable was addressed using the Synthetic Minority Oversampling Technique (SMOTE). Models were evaluated on an independent test set using standard classification metrics.
+
+The ROC curves for all supervised models, shown in **Figure 1**, illustrate their ability to distinguish between depressed and non-depressed classes. Logistic Regression achieved the highest Area Under the Curve (AUC = 0.55), slightly outperforming Random Forest (AUC = 0.54) and Gradient Boosting (AUC = 0.53). These results suggest marginal improvements over random performance for all models.
+
+
 ![ROC Curves for Models](/Applied%20Machine%20Learning/Images/ROC.png)
-  - SHAP analysis identified employment status and substance use as the most influential predictors.
+
+**Figure 1.** ROC and PR curves compare Logistic Regression, Random Forest, and Gradient Boosting in distinguishing depressed and non-depressed classes. Logistic Regression achieved the highest AUC of 0.55.
+
+SHAP analysis for Logistic Regression, shown in **Figure 2**, highlighted employment status (EMPLOY) and substance use flag (SUB) as the most influential predictors, followed by age (AGE) and gender (GENDER). These results demonstrate the interpretability of Logistic Regression and the importance of key demographic factors in predicting depression outcomes.
+
+### Logistic Regression SHAP Bar Plot
+
 ![SHAP Analysis for Logistic Regression](/Applied%20Machine%20Learning/Images/SHAP.png)
-  - Unsupervised models showed poor performance (e.g., K-Modes silhouette score = 0.067).
+
+**Figure 2.**  SHAP summary bar plot highlights employment status (EMPLOY) and substance use flag (SUB) as the most influential predictors of depression, followed by age (AGE) and gender (GENDER).
+
+Unsupervised models, including Hierarchical Clustering, K-Modes Clustering, and Multiple Correspondence Analysis (MCA), were explored to identify patterns in the dataset. Hierarchical Clustering produced a silhouette score of 0.50, suggesting moderately distinct clusters; however, as shown in **Figure 3**, the silhouette plot revealed uneven cluster sizes and overlapping data points, indicating limited meaningful segmentation of the dataset. K-Modes Clustering performed poorly, yielding a low silhouette score of 0.067, which reflects the lack of strong distinctions among the categorical variables. These results demonstrate the challenges of clustering demographic data with limited variability and clear group separations.
+
+![Silhouette Scores for Hierarchical Clustering](/Applied%20Machine%20Learning/Images/Silhouette.png)
+
+**Figure 3:** Silhouette plot for Hierarchical Clustering shows an average score of 0.50, with uneven cluster sizes and overlapping data suggesting limited segmentation.
+
+MCA proved effective in reducing the dataset’s dimensionality while retaining critical information. Logistic Regression applied to the MCA-transformed data achieved an accuracy of 52.86% on the test set after optimization. While this performance was comparable to the original Logistic Regression model, MCA provided additional insights into the dataset’s structure through its dimensionality reduction process.
+
+Classification metrics for the supervised models are summarized in Table 1. Logistic Regression and the optimized MCA Logistic Regression exhibited similar performance, both achieving an accuracy of 53%. The computational efficiency and interpretability of Logistic Regression make it the preferred model for this dataset.
 
 ### Classification Report Summary
 
@@ -59,16 +76,22 @@ Building on these findings, this study applies both supervised and unsupervised 
 | Gradient Boosting        | 0.42                 | 0.47              | 0.44                | 0.54             |
 | MCA Logistic Regression  | 0.42                 | 0.54              | 0.47                | 0.53             |
 
+**Table 1.** Summary of classification metrics for supervised machine learning models. Precision, recall, F1-score, and overall accuracy are reported for the depressed class. Logistic Regression and Optimized MCA Logistic Regression achieved similar performance, with an overall accuracy of 53%, while Random Forest and Gradient Boosting slightly outperformed in accuracy (54%) but showed no significant advantage in F1-score or recall.
+
 ---
 
 ## Discussion
-- Supervised models exhibited low predictive performance, highlighting the insufficiency of demographic data in capturing the complexity of depression.
-- Unsupervised models struggled to identify meaningful patterns due to overlapping and imbalanced categorical data.
-- Future research should incorporate multidimensional datasets (e.g., clinical, genetic, neuroimaging data) and advanced techniques like deep learning to improve model performance.
+The results of this study demonstrate the challenges of using demographic data to predict depression with machine learning. The supervised models, including Logistic Regression, Random Forest, and Gradient Boosting, achieved relatively low performance across all evaluation metrics, indicating that demographic variables alone cannot fully capture the complexity of depression. For example, the best performing model Logistic Regression achieved an accuracy of 53%, which is only marginally above random prediction. SHAP analysis identified employment status and substance use as the most influential predictors, while variables such as race and ethnicity had minimal impact, suggesting that these features do not adequately represent the multifactorial nature of depression. These findings align with expectations, as depression is influenced by psychological, environmental, and biological factors not captured by the dataset.
+
+Unsupervised models, such as Hierarchical Clustering and K-Modes Clustering, also faced limitations in identifying meaningful patterns. Hierarchical Clustering achieved a moderate silhouette score of 0.50 but failed to produce distinct clusters, while K-Modes Clustering, with a silhouette score of 0.067, highlighted the difficulty of grouping categorical data with overlapping characteristics. In contrast, MCA proved valuable for dimensionality reduction, offering insights into the dataset’s structure. However, its integration with Logistic Regression did not significantly enhance predictive performance. These results point to the need for richer datasets with more complex features to better address the challenges of modeling depression.
+
+The implementation process also revealed areas for improvement. Addressing class imbalances with SMOTE was a necessary step, but the models still struggled to generalize, likely due to the inherent biases and skewness of the dataset. Hyperparameter optimization via Optuna helped optimize model performance, yet even with fine-tuning, the results remained suboptimal. Future efforts could explore incorporating additional data modalities and alternative feature engineering techniques to enhance performance.
 
 ---
 
 ## Conclusion
-This study underscores the limitations of demographic data in modeling depression using machine learning. The findings emphasize the need for richer datasets, integrating diverse data modalities to better understand depression's multifactorial nature. Future work should explore advanced modeling techniques, including deep learning and longitudinal analyses, to uncover deeper insights into depression.
+This study highlights the limitations of relying on demographic data to predict depression using machine learning. The low performance of both supervised and unsupervised models underscores the insufficiency of demographic variables in capturing the multifactorial nature of depression. Furthermore, dataset biases, such as imbalanced distributions of ethnicity and race, and the exclusion of critical factors like clinical and environmental data, further constrained the models’ effectiveness.
+Despite these limitations, this study provides valuable insights into the demographic determinants of depression and emphasizes the need for multidimensional data and advanced modeling techniques. Future research should focus on integrating clinical, genetic, or neuroimaging data, exploring deep learning models, and incorporating longitudinal datasets to better understand the dynamic nature of depression. This work establishes a foundation for leveraging machine learning in mental health research and addressing its associated challenges.
+
 
 ---
