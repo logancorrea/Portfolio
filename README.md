@@ -54,7 +54,7 @@ This portfolio highlights my work in areas such as machine learning, data visual
 Feel free to connect with me to discuss these projects or explore collaboration opportunities:
 
 - **Email:** [logancorrea0@gmail.com](mailto:logancorrea0@gmail.com)
-- **LinkedIn:** [linkedin.com/in/logan-correa]([https://linkedin.com/in/your-profile](https://www.linkedin.com/in/logan-correa/))
+- **LinkedIn:** [linkedin.com/in/logan-correa](https://www.linkedin.com/in/logan-correa/)
 
 ---
 
