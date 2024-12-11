@@ -45,9 +45,9 @@ Building on these findings, this study applies both supervised and unsupervised 
 - **Unsupervised Models:** Hierarchical Clustering, K-Modes Clustering, and MCA for dimensionality reduction.
 - **Performance:**
   - Logistic Regression achieved the highest AUC (0.55).
-![ROC Curves for Models](images/ROC.png "Figure 1: ROC Curves for Models")
+![ROC Curves for Models](/Applied%20Machine%20Learning/Images/ROC.png)
   - SHAP analysis identified employment status and substance use as the most influential predictors.
-![SHAP Analysis for Logistic Regression](images/SHAP.png "Figure 2: SHAP Analysis for Logistic Regression")
+![SHAP Analysis for Logistic Regression](/Applied%20Machine%20Learning/Images/SHAP.png)
   - Unsupervised models showed poor performance (e.g., K-Modes silhouette score = 0.067).
 
 ### Classification Report Summary
