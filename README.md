@@ -1,4 +1,4 @@
-# Data Science Project Portfolio
+# Project Portfolio
 
 Welcome to my project portfolio! This repository showcases the various projects I've completed throughout my graduate studies. Each folder in this repository represents a unique project, containing code, data, and a detailed report outlining the objectives, methodology, results, and insights.
 
