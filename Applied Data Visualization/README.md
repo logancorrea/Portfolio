@@ -18,7 +18,7 @@ Understanding the mechanics of earthquakes and their potential consequences is c
 
 ### Historical Earthquakes in Utah
 
-PLOT
+[![Historical Utah Earthquakes](/Applied%20Data%20Visualization/Images/scatterplot.png)](/Applied%20Data%20Visualization/Images/scatterplot.html)
 
 Figure 1. This graphic captures Utah's seismic history from 1850 to 2016. The scatterplot shows earthquake magnitudes over time, the bar chart highlights the most active fault zones, and the epicenter map reveals clustering along the Intermountain Seismic Belt.
 
