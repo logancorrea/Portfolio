@@ -18,8 +18,7 @@ Understanding the mechanics of earthquakes and their potential consequences is c
 
 ### Historical Earthquakes in Utah
 
-[![Historical Utah Earthquakes](/Applied%20Data%20Visualization/Images/scatterplot.png)](https://logancorrea.github.io/Portfolio/Applied%20Data%20Visualization/Images/scatterplot.html
-)
+[![Historical Utah Earthquakes](/Applied%20Data%20Visualization/Images/scatterplot.png)](https://logancorrea.github.io/Portfolio/Applied%20Data%20Visualization/Images/scatterplot.html "Click for Interactivity")
 
 Figure 1. This graphic captures Utah's seismic history from 1850 to 2016. The scatterplot shows earthquake magnitudes over time, the bar chart highlights the most active fault zones, and the epicenter map reveals clustering along the Intermountain Seismic Belt.
 
@@ -47,7 +46,7 @@ The immense energy released during an earthquake is what makes these natural eve
 
 To put this into perspective, a magnitude 7 earthquake releases energy equivalent to the detonation of approximately 500,000 tons of TNT, or about 33 times the energy released by the atomic bomb dropped on Hiroshima, which was estimated at 15,000 tons of TNT. This colossal force translates into intense ground shaking capable of toppling buildings, fracturing roadways, and damaging critical infrastructure like water lines and power grids. The destruction extends beyond structural damage; landslides, liquefaction, and fires caused by ruptured gas lines often compound the devastation.
 
-![Magnitude Energy Release](/Applied%20Data%20Visualization/Images/energy.png)
+[![Magnitude Energy Release](/Applied%20Data%20Visualization/Images/energy.png)](https://logancorrea.github.io/Portfolio/Applied%20Data%20Visualization/Images/energy.html "Click for Interactivity")
 
 Figure 2. This figure illustrates the relationship between earthquake magnitude and energy release, measured in tons of TNT. Highlighted are significant Utah earthquakes, including the 2020 Magna earthquake (6,700 tons of TNT) and the 1901 Richfield earthquake. It models a potential Wasatch Front earthquake (2020–2070) with a magnitude of 6.75+, releasing nearly 220,000 tons of TNT.
 
@@ -71,7 +70,7 @@ Figure 4. This map illustrates the liquefaction risk for housing units across Sa
 ### Building Risks
 Older buildings in Utah, particularly those constructed before the adoption of modern seismic building codes in 1975, are highly susceptible to damage during earthquakes. Many of these pre-1975 structures are built with unreinforced masonry (URM), which lacks the flexibility and reinforcement needed to withstand intense seismic shaking. This design flaw makes them prone to cracking, partial collapse, or even total failure, posing significant risks to occupants and bystanders. Along the Wasatch Front, a substantial number of schools, commercial buildings, and historic landmarks were built before this critical regulatory change, heightening the vulnerability of these communities. Retrofitting these older buildings with seismic reinforcements, such as steel braces, shear walls, and improved foundations, is essential to reduce the risk of widespread damage and casualties during a seismic event. The treemap below shows that Salt Lake City, Murray, and Midvale are particularly vulnerable due to the majority of their homes being constructed before 1975.
 
-![Housing Risk](/Applied%20Data%20Visualization/Images/treemap.png)
+[![Housing Risk](/Applied%20Data%20Visualization/Images/treemap.png)](https://logancorrea.github.io/Portfolio/Applied%20Data%20Visualization/Images/treemap.html "Click for Interactivity")
 
 Figure 5. This treemap shows housing units in Salt Lake County cities, categorized by construction year. In Salt Lake City, the majority of houses were built before 1975, indicating higher vulnerability to earthquake damage. In contrast, other cities, such as Sandy and South Jordan, have a greater proportion of newer, less vulnerable homes built after 1975.
 
