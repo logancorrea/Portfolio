@@ -18,7 +18,7 @@ Understanding the mechanics of earthquakes and their potential consequences is c
 
 ### Historical Earthquakes in Utah
 
-[![Historical Utah Earthquakes](/Applied%20Data%20Visualization/Images/scatterplot.png)](/Applied%20Data%20Visualization/Images/scatterplot.html)
+![Historical Utah Earthquakes](/Applied%20Data%20Visualization/Images/scatterplot.png)
 
 Figure 1. This graphic captures Utah's seismic history from 1850 to 2016. The scatterplot shows earthquake magnitudes over time, the bar chart highlights the most active fault zones, and the epicenter map reveals clustering along the Intermountain Seismic Belt.
 
@@ -46,7 +46,7 @@ The immense energy released during an earthquake is what makes these natural eve
 
 To put this into perspective, a magnitude 7 earthquake releases energy equivalent to the detonation of approximately 500,000 tons of TNT, or about 33 times the energy released by the atomic bomb dropped on Hiroshima, which was estimated at 15,000 tons of TNT. This colossal force translates into intense ground shaking capable of toppling buildings, fracturing roadways, and damaging critical infrastructure like water lines and power grids. The destruction extends beyond structural damage; landslides, liquefaction, and fires caused by ruptured gas lines often compound the devastation.
 
-PLOT
+![Magnitude Energy Release](/Applied%20Data%20Visualization/Images/energy.png)
 
 Figure 2. This figure illustrates the relationship between earthquake magnitude and energy release, measured in tons of TNT. Highlighted are significant Utah earthquakes, including the 2020 Magna earthquake (6,700 tons of TNT) and the 1901 Richfield earthquake. It models a potential Wasatch Front earthquake (2020–2070) with a magnitude of 6.75+, releasing nearly 220,000 tons of TNT.
 
@@ -57,20 +57,20 @@ Understanding the relationship between magnitude and energy release underscores 
 ### Geographic Vulnerabilities
 Utah lies in a seismically active region, with numerous fault lines concentrated along the Wasatch Front, a corridor that includes major population centers such as Salt Lake City, Provo, and Ogden. The Wasatch Fault, spanning approximately 240 miles, is one of the most significant active faults in the United States. This fault system runs directly through or near these urban areas, placing over 80% of Utah's population at risk from potential earthquakes. Experts predict that a major earthquake (magnitude 6.5 or higher) is overdue in this region, given its historical activity and the long intervals since the last major events. The proximity of these fault lines to densely populated areas amplifies the potential for widespread damage to infrastructure, homes, and essential services, making earthquake preparedness and mitigation strategies critical for the state.
 
-PLOT
+![Fault Lines](/Applied%20Data%20Visualization/Images/faults.png)
 
 Figure 3. This map overlays fault lines on a population density heatmap of Utah. Darker red areas represent higher population densities, concentrated along the Wasatch Front, which aligns closely with major fault lines.
 
 Sediment liquefaction poses a significant risk in Utah, particularly along the Wasatch Front, where loose, water-saturated sediments are prevalent. During an earthquake, the intense shaking can cause these sediments to lose their strength and behave like a liquid temporarily. This phenomenon is most likely to occur in areas with shallow water tables and unconsolidated sands and silts, conditions common in valley regions such as the Salt Lake Valley. Liquefaction can lead to severe ground deformation, sinking, or tilting of structures, and the failure of buried utilities, exacerbating the damage caused by an earthquake. The high population density and concentration of critical infrastructure in liquefaction-prone areas heighten the potential for economic loss and human impact, underscoring the need for robust land-use planning and construction practices to mitigate this hazard. The visualization below shows the liquefaction risk of houses within the Salt Lake Valley.
 
-PLOT
+![Liquefaction Risk](/Applied%20Data%20Visualization/Images/liquefaction.png)
 
 Figure 4. This map illustrates the liquefaction risk for housing units across Salt Lake County, with darker red shades indicating higher liquefaction potential. The highest-risk areas are concentrated along the valley floor, aligning with densely populated regions and highlighting vulnerabilities to seismic activity.
 
 ### Building Risks
 Older buildings in Utah, particularly those constructed before the adoption of modern seismic building codes in 1975, are highly susceptible to damage during earthquakes. Many of these pre-1975 structures are built with unreinforced masonry (URM), which lacks the flexibility and reinforcement needed to withstand intense seismic shaking. This design flaw makes them prone to cracking, partial collapse, or even total failure, posing significant risks to occupants and bystanders. Along the Wasatch Front, a substantial number of schools, commercial buildings, and historic landmarks were built before this critical regulatory change, heightening the vulnerability of these communities. Retrofitting these older buildings with seismic reinforcements, such as steel braces, shear walls, and improved foundations, is essential to reduce the risk of widespread damage and casualties during a seismic event. The treemap below shows that Salt Lake City, Murray, and Midvale are particularly vulnerable due to the majority of their homes being constructed before 1975.
 
-PLOT
+![Housing Risk](/Applied%20Data%20Visualization/Images/treemap.png)
 
 Figure 5. This treemap shows housing units in Salt Lake County cities, categorized by construction year. In Salt Lake City, the majority of houses were built before 1975, indicating higher vulnerability to earthquake damage. In contrast, other cities, such as Sandy and South Jordan, have a greater proportion of newer, less vulnerable homes built after 1975.
 
