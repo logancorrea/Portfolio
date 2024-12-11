@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"data": {"name": "data-71720f1fbb2505f2a4bba4ca2a462c0a"}, "mark": {"type": "line", "color": "black", "opacity": 0.8}, "encoding": {"x": {"axis": {"grid": false}, "field": "Magnitude", "title": "Magnitude", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "Energy Release (Tons of TNT)", "title": "", "type": "quantitative"}}}, {"data": {"name": "data-90f6abc688260f0b4074c8fb40bdc532"}, "mark": {"type": "point", "filled": true, "opacity": 1}, "encoding": {"color": {"field": "Energy (Tons of TNT)", "legend": null, "scale": {"scheme": "yelloworangered"}, "title": "", "type": "quantitative"}, "size": {"field": "Energy (Tons of TNT)", "legend": null, "scale": {"range": [50, 800]}, "type": "quantitative"}, "tooltip": [{"field": "Mag", "title": "Magnitude", "type": "quantitative"}, {"field": "Energy (Tons of TNT)", "type": "quantitative"}], "x": {"axis": {"grid": false}, "field": "Mag", "scale": {"domain": [4, 7.5]}, "title": "Magnitude", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "Energy (Tons of TNT)", "title": "Energy Release (Tons of TNT)", "type": "quantitative"}}}, {"data": {"name": "data-90f6abc688260f0b4074c8fb40bdc532"}, "mark": {"type": "text", "align": "right", "dx": -15, "dy": -5, "fontWeight": "bold"}, "encoding": {"color": {"condition": {"test": "(datum.Annotation === '2020-2070 Anticipated Wasatch Front Earthquake')", "value": "#b00225"}, "value": "black"}, "text": {"field": "Annotation", "type": "nominal"}, "x": {"field": "Mag", "type": "quantitative"}, "y": {"field": "Energy (Tons of TNT)", "type": "quantitative"}}}], "height": 400, "title": {"text": "The Wasatch Range Is Predicted to Have an Earthquake With Magnitdue 6.75+", "subtitle": ["This equates to an energy release of nearly 220,000 tons of TNT", " The 2020 Magna earthquake had an energy release around 6,700 tons of TNT"], "fontWeight": "bold", "fontSize": 15, "anchor": "start", "offset": 15, "color": "black"}, "width": 400, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-71720f1fbb2505f2a4bba4ca2a462c0a": [{"Magnitude": 4.000000000000002, "Energy Release (Tons of TNT)": 23.900600000000196}, {"Magnitude": 4.100000000000001, "Energy Release (Tons of TNT)": 33.297283484474654}, {"Magnitude": 4.200000000000002, "Energy Release (Tons of TNT)": 46.38833700599436}, {"Magnitude": 4.3000000000000025, "Energy Release (Tons of TNT)": 64.62622727722042}, {"Magnitude": 4.400000000000002, "Energy Release (Tons of TNT)": 90.03446817994897}, {"Magnitude": 4.500000000000002, "Energy Release (Tons of TNT)": 125.43213184445784}, {"Magnitude": 4.600000000000002, "Energy Release (Tons of TNT)": 174.7466277870394}, {"Magnitude": 4.700000000000003, "Energy Release (Tons of TNT)": 243.44945329326475}, {"Magnitude": 4.8000000000000025, "Energy Release (Tons of TNT)": 339.16326202882675}, {"Magnitude": 4.900000000000002, "Energy Release (Tons of TNT)": 472.5076058045786}, {"Magnitude": 5.000000000000003, "Energy Release (Tons of TNT)": 658.2771854700492}, {"Magnitude": 5.100000000000003, "Energy Release (Tons of TNT)": 917.0833391612863}, {"Magnitude": 5.200000000000003, "Energy Release (Tons of TNT)": 1277.6408928203412}, {"Magnitude": 5.3000000000000025, "Energy Release (Tons of TNT)": 1779.9541015537623}, {"Magnitude": 5.400000000000003, "Energy Release (Tons of TNT)": 2479.7551655100297}, {"Magnitude": 5.5000000000000036, "Energy Release (Tons of TNT)": 3454.687778469055}, {"Magnitude": 5.600000000000003, "Energy Release (Tons of TNT)": 4812.921780626142}, {"Magnitude": 5.700000000000003, "Energy Release (Tons of TNT)": 6705.154720722933}, {"Magnitude": 5.800000000000003, "Energy Release (Tons of TNT)": 9341.331913975971}, {"Magnitude": 5.900000000000004, "Energy Release (Tons of TNT)": 13013.940104525751}, {"Magnitude": 6.0000000000000036, "Energy Release (Tons of TNT)": 18130.45918974269}, {"Magnitude": 6.100000000000003, "Energy Release (Tons of TNT)": 25258.572560712226}, {"Magnitude": 6.200000000000004, "Energy Release (Tons of TNT)": 35189.15219564381}, {"Magnitude": 6.300000000000004, "Energy Release (Tons of TNT)": 49024.006771239045}, {"Magnitude": 6.400000000000004, "Energy Release (Tons of TNT)": 68298.12854098802}, {"Magnitude": 6.5000000000000036, "Energy Release (Tons of TNT)": 95150.00240531025}, {"Magnitude": 6.600000000000004, "Energy Release (Tons of TNT)": 132558.87315121997}, {"Magnitude": 6.700000000000005, "Energy Release (Tons of TNT)": 184675.2959213864}, {"Magnitude": 6.800000000000004, "Energy Release (Tons of TNT)": 257281.6448488155}], "data-90f6abc688260f0b4074c8fb40bdc532": [{"Year": 1901, "Mag": 6.627542, "FaultZone": "Beaver Basin faults", "Energy (Tons of TNT)": 145234.33, "Annotation": "1901 Richfield Earthquake"}, {"Year": 1934, "Mag": 6.591344, "FaultZone": "Great Salt Lake fault zone", "Energy (Tons of TNT)": 128808.39, "Annotation": "1934 Hansel Valley Earthquake"}, {"Year": 1902, "Mag": 6.341, "FaultZone": "Washington fault zone", "Energy (Tons of TNT)": 56162.81, "Annotation": "1902 Pine Valley Earthquake"}, {"Year": 1975, "Mag": 6.019454, "FaultZone": "Wasatch fault zone", "Energy (Tons of TNT)": 19338.49, "Annotation": "1975 Pocatello Valley Earthquake"}, {"Year": "Within 50 years", "Mag": 6.75, "FaultZone": "Wasatch fault zone", "Energy (Tons of TNT)": 217976.06, "Annotation": "2020-2070 Anticipated Wasatch Front Earthquake"}, {"Year": 2020, "Mag": 5.7, "FaultZone": "Wasatch fault zone", "Energy (Tons of TNT)": 6705.15, "Annotation": "2020 Magna Earthquake"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
