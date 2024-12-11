@@ -55,3 +55,32 @@ In this analysis, well-known genes associated with LUSC such as FLRT3, PPP2R2C, 
 
 ## Conclusion
 In conclusion, this analysis provides compelling evidence that certain gene expressions are critical in distinguishing between normal tissue and lung squamous cell carcinoma tumor tissues. The application of PCA yielded a robust principal component (PC1) that explains a substantial portion of the variance in gene expression profiles, and this component's significance is reinforced by the logistic regression analysis. PC1 alone has demonstrated its predictive power, simplifying the model without sacrificing accuracy, as supported by the ANOVA test results. The findings support the hypothesis that mutations in specific genes are linked to cancer development, with genes such as BUB1B, HMGA1, KNSTRN, EZH2, and FEN1 standing out in their association with LUSC. The odds ratio derived from the logistic regression model quantifies this risk, indicating a nearly threefold increase in the likelihood of LUSC diagnosis with a unit increase in PC1 gene expression. Further research is needed to explore the functional implications of the identified genes and their potential as therapeutic targets in LUSC.
+
+## References
+
+1. **National Cancer Institute.** (2018). *Cancer of Any Site - Cancer Stat Facts.* SEER. [https://seer.cancer.gov/statfacts/html/all.html](https://seer.cancer.gov/statfacts/html/all.html)
+
+2. **Youlden, D. R., Cramb, S. M., & Baade, P. D.** (2008). *The International Epidemiology of Lung Cancer: Geographical Distribution and Secular Trends.* Journal of Thoracic Oncology, 3(8), 819–831. [https://doi.org/10.1097/jto.0b013e31818020eb](https://doi.org/10.1097/jto.0b013e31818020eb)
+
+3. **Barbar, J., Armach, M., Hodroj, M. H., Assi, S., El Nakib, C., Chamseddine, N., & Assi, H. I.** (2022). *Emerging genetic biomarkers in lung adenocarcinoma.* SAGE open medicine, 10, 20503121221132352. [https://doi.org/10.1177/20503121221132352](https://doi.org/10.1177/20503121221132352)
+
+4. **Ma, X., Ren, H., Peng, R., Li, Y., & Ming, L.** (2020). *Identification of key genes associated with progression and prognosis for lung squamous cell carcinoma.* PeerJ, 8, e9086. [https://doi.org/10.7717/peerj.9086](https://doi.org/10.7717/peerj.9086)
+
+5. **Yang P.** (2009). *Epidemiology of lung cancer prognosis: quantity and quality of life.* Methods in molecular biology (Clifton, N.J.), 471, 469–486. [https://doi.org/10.1007/978-1-59745-416-2_24](https://doi.org/10.1007/978-1-59745-416-2_24)
+
+6. **ÖZÇELIk, B.** (2024, March 4). *TCGA - LUSC: Lung cancer gene expression dataset.* Kaggle. [https://www.kaggle.com/datasets/noepinefrin/tcga-lusc-lung-cell-squamous-carcinoma-gene-exp?resource=download](https://www.kaggle.com/datasets/noepinefrin/tcga-lusc-lung-cell-squamous-carcinoma-gene-exp?resource=download)
+
+7. **Genomics Commons Data Portal.** *Portal.gdc.cancer.gov.* Retrieved February 5, 2024, from [https://portal.gdc.cancer.gov/projects/TCGA-LUSC](https://portal.gdc.cancer.gov/projects/TCGA-LUSC)
+
+8. **Creating heatmaps in R.** (n.d.). [https://igordot.github.io/tutorials/heatmaps-2017-07.nb.html](https://igordot.github.io/tutorials/heatmaps-2017-07.nb.html)
+
+9. **Cicirò, Y., Ragusa, D., & Sala, A.** (2024). *Expression of the checkpoint kinase BUB1 is a predictor of response to cancer therapies.* Scientific Reports, 14(1), 4461. [https://doi.org/10.1038/s41598-024-55080-y](https://doi.org/10.1038/s41598-024-55080-y)
+
+10. **Chen, J., Ji, K., Gu, L., Fang, Y., Pan, M., & Tian, S.** (2022). *HMGA1 Promotes Macrophage Recruitment via Activation of NF-κB-CCL2 Signaling in Hepatocellular Carcinoma.* Journal of Immunology Research, 2022, 1–10. [https://doi.org/10.1155/2022/4727198](https://doi.org/10.1155/2022/4727198)
+
+11. **Zhang, W., Liao, Y., Liu, C., Liu, L., & Zhou, X.** (2023). *KNSTRN, a Poor Prognostic Biomarker, Affects the Tumor Immune Microenvironment and Immunotherapy Outcomes in Pan-Cancer.* Disease Markers, 2023, 1–32. [https://doi.org/10.1155/2023/6729717](https://doi.org/10.1155/2023/6729717)
+
+12. **Fan, K., Zhang, B.-H., Han, D., & Sun, Y.-C.** (2023). *EZH2 as a prognostic-related biomarker in lung adenocarcinoma correlating with cell cycle and immune infiltrates.* BMC Bioinformatics, 24(1). [https://doi.org/10.1186/s12859-023-05271-7](https://doi.org/10.1186/s12859-023-05271-7)
+
+13. **Zhang, Y., Liu, X., Liu, L., Chen, J., Hu, Q., Shen, S., Zhou, Y., Chen, S., Xue, C., Cui, G., & Yu, Z.** (2020). *Upregulation of FEN1 Is Associated with the Tumor Progression and Prognosis of Hepatocellular Carcinoma.* Disease Markers, 2020, 1–17. [https://doi.org/10.1155/2020/2514090](https://doi.org/10.1155/2020/2514090)
+
