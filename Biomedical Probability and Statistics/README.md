@@ -26,7 +26,7 @@ Principal Component Analysis (PCA) was conducted on the dataset to diminish the 
 ## Results
 The raw gene expression data exhibits a mean of approximately 23.92 with a wide standard deviation of 119.33 while the scaled data centers around a mean of approximately -0.01 with a more restrained standard deviation of 0.97. Both datasets have similar medians, with the raw data ranging from 0 to 3459.58 and the scaled data ranging from -3.57 to 5.46. The raw data displays a skewness of approximately 12.33, indicating a highly skewed distribution, while the scaled data has a skewness of approximately 0.72. Similarly, the kurtosis of the raw data is approximately 200.84, suggesting heavy-tailedness, whereas the scaled data has a kurtosis of approximately 1.13, indicating a less extreme tail behavior. Overall, scaling gene expression data standardized the values, making them more comparable by removing differences in scale and distribution, while preserving the underlying statistical properties.
 
-PLOT
+![Volcano Plot](/Biomedical%Probability%and%Statistics/Images/volcano.png)
 
 Figure 1. Volcano plot of gene expression. Downregulated genes are showcased in blue, upregulated genes in red, and normally regulated genes in gray. Significance was determined through the application of Welch's t-test and corrected using Bonferroni correction methods. Dotted lines at Log2 Fold Change -1.5 and 1.5 delineate the boundaries for normal regulation.
 
