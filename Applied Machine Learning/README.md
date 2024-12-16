@@ -39,7 +39,7 @@ The ROC curves for all supervised models, shown in **Figure 1**, illustrate thei
 
 ![ROC Curves for Models](/Applied%20Machine%20Learning/Images/ROC.png)
 
-**Figure 1.** ROC and PR curves compare Logistic Regression, Random Forest, and Gradient Boosting in distinguishing depressed and non-depressed classes. Logistic Regression achieved the highest AUC of 0.55.
+<sub>**Figure 1.** ROC and PR curves compare Logistic Regression, Random Forest, and Gradient Boosting in distinguishing depressed and non-depressed classes. Logistic Regression achieved the highest AUC of 0.55.</sub>
 
 SHAP analysis for Logistic Regression, shown in **Figure 2**, highlighted employment status (EMPLOY) and substance use flag (SUB) as the most influential predictors, followed by age (AGE) and gender (GENDER). These results demonstrate the interpretability of Logistic Regression and the importance of key demographic factors in predicting depression outcomes.
 
@@ -47,13 +47,13 @@ SHAP analysis for Logistic Regression, shown in **Figure 2**, highlighted employ
 
 ![SHAP Analysis for Logistic Regression](/Applied%20Machine%20Learning/Images/SHAP.png)
 
-**Figure 2.**  SHAP summary bar plot highlights employment status (EMPLOY) and substance use flag (SUB) as the most influential predictors of depression, followed by age (AGE) and gender (GENDER).
+<sub>**Figure 2.**  SHAP summary bar plot highlights employment status (EMPLOY) and substance use flag (SUB) as the most influential predictors of depression, followed by age (AGE) and gender (GENDER).</sub>
 
 Unsupervised models, including Hierarchical Clustering, K-Modes Clustering, and Multiple Correspondence Analysis (MCA), were explored to identify patterns in the dataset. Hierarchical Clustering produced a silhouette score of 0.50, suggesting moderately distinct clusters; however, as shown in **Figure 3**, the silhouette plot revealed uneven cluster sizes and overlapping data points, indicating limited meaningful segmentation of the dataset. K-Modes Clustering performed poorly, yielding a low silhouette score of 0.067, which reflects the lack of strong distinctions among the categorical variables. These results demonstrate the challenges of clustering demographic data with limited variability and clear group separations.
 
 ![Silhouette Scores for Hierarchical Clustering](/Applied%20Machine%20Learning/Images/Silhouette.png)
 
-**Figure 3:** Silhouette plot for Hierarchical Clustering shows an average score of 0.50, with uneven cluster sizes and overlapping data suggesting limited segmentation.
+<sub>**Figure 3:** Silhouette plot for Hierarchical Clustering shows an average score of 0.50, with uneven cluster sizes and overlapping data suggesting limited segmentation.</sub>
 
 MCA proved effective in reducing the dataset’s dimensionality while retaining critical information. Logistic Regression applied to the MCA-transformed data achieved an accuracy of 52.86% on the test set after optimization. While this performance was comparable to the original Logistic Regression model, MCA provided additional insights into the dataset’s structure through its dimensionality reduction process.
 
@@ -68,7 +68,7 @@ Classification metrics for the supervised models are summarized in Table 1. Logi
 | Gradient Boosting        | 0.42                 | 0.47              | 0.44                | 0.54             |
 | MCA Logistic Regression  | 0.42                 | 0.54              | 0.47                | 0.53             |
 
-**Table 1.** Summary of classification metrics for supervised machine learning models. Precision, recall, F1-score, and overall accuracy are reported for the depressed class. Logistic Regression and Optimized MCA Logistic Regression achieved similar performance, with an overall accuracy of 53%, while Random Forest and Gradient Boosting slightly outperformed in accuracy (54%) but showed no significant advantage in F1-score or recall.
+<sub>**Table 1.** Summary of classification metrics for supervised machine learning models. Precision, recall, F1-score, and overall accuracy are reported for the depressed class. Logistic Regression and Optimized MCA Logistic Regression achieved similar performance, with an overall accuracy of 53%, while Random Forest and Gradient Boosting slightly outperformed in accuracy (54%) but showed no significant advantage in F1-score or recall.</sub>
 
 ## Discussion
 The results of this study demonstrate the challenges of using demographic data to predict depression with machine learning. The supervised models, including Logistic Regression, Random Forest, and Gradient Boosting, achieved relatively low performance across all evaluation metrics, indicating that demographic variables alone cannot fully capture the complexity of depression. For example, the best performing model Logistic Regression achieved an accuracy of 53%, which is only marginally above random prediction. SHAP analysis identified employment status and substance use as the most influential predictors, while variables such as race and ethnicity had minimal impact, suggesting that these features do not adequately represent the multifactorial nature of depression. These findings align with expectations, as depression is influenced by psychological, environmental, and biological factors not captured by the dataset.
