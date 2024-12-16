@@ -28,19 +28,19 @@ The raw gene expression data exhibits a mean of approximately 23.92 with a wide 
 
 ![Volcano Plot](/Biomedical%20Probability%20and%20Statistics/Images/volcano.png)
 
-Figure 1. Volcano plot of gene expression. Downregulated genes are showcased in blue, upregulated genes in red, and normally regulated genes in gray. Significance was determined through the application of Welch's t-test and corrected using Bonferroni correction methods. Dotted lines at Log2 Fold Change -1.5 and 1.5 delineate the boundaries for normal regulation.
+<sub>**Figure 1.** Volcano plot of gene expression. Downregulated genes are showcased in blue, upregulated genes in red, and normally regulated genes in gray. Significance was determined through the application of Welch's t-test and corrected using Bonferroni correction methods. Dotted lines at Log2 Fold Change -1.5 and 1.5 delineate the boundaries for normal regulation.</sub>
 
 Among the gene expression data, 7.24% of genes exhibit downregulation, 12.07% display upregulation, while the majority, accounting for 80.68%, show normal regulation. Notably, some of the most significantly regulated genes include BUB1B, HMGA1, STIL, FEN1, and KNL1. The dataset underwent further refinement using insights from the volcano plot, wherein genes with non-significant expression and regulation (p-value > 7.1e-5 and log2 fold change between -1.5 and 1.5) were removed. Significance was determined through the application of a Welch’s t-test, with the Bonferroni correction applied to account for multiple testing.
 
 ![Gene Expression Heatmap](/Biomedical%20Probability%20and%20Statistics/Images/heatmap.png)
 
-Figure 2. Heatmap of gene expression created using the R Pheatmap package. Gene expression is color-coded to reflect the degree of regulation, with downregulated genes appearing in varying shades of blue and upregulated genes in shades of red. Patient IDs are annotated with a prefix, "N" for normal patients and "T" for tumor patients. 
+<sub>**Figure 2.** Heatmap of gene expression created using the R Pheatmap package. Gene expression is color-coded to reflect the degree of regulation, with downregulated genes appearing in varying shades of blue and upregulated genes in shades of red. Patient IDs are annotated with a prefix, "N" for normal patients and "T" for tumor patients. </sub>
 
 The heatmap reveals a distinct separation between normal (denoted by prefix “N”) and tumor patients (denoted by prefix “T”), visually indicating a predominance of upregulated gene expression in tumor samples for the most significantly regulated genes. Clustering of patients was automated by enabling the Pheatmap cluster_col parameter [8]. 
 
 ![PCA Plot](/Biomedical%20Probability%20and%20Statistics/Images/pca.png)
 
-Figure 3. 2D PCA-plot showing clustering of “Normal” and “Tumor” diagnoses. Normal diagnoses are represented with blue circles and tumor diagnoses are represented with red triangles.
+<sub>**Figure 3.** 2D PCA-plot showing clustering of “Normal” and “Tumor” diagnoses. Normal diagnoses are represented with blue circles and tumor diagnoses are represented with red triangles.</sub>
 
 After collinear variables were identified and removed, PCA was performed on the scaled dataset. The PCA analysis reveals that the first principal component (PC1) explains a significant 37.6% of the dataset's variance, indicating it captures a major pattern distinguishing between different biological states. Although the second principal component (PC2) accounts for a smaller portion of the variance (6.4%), it still plays a crucial role in differentiating data points, likely reflecting variations not captured by PC1. The leading variables impacting PC1, which are BUB1B, HMGA1, KNSTRN, EZH2, and FEN1, correspond to the same genes previously identified as significant, demonstrating the effectiveness of this Principal Component Analysis.
 
